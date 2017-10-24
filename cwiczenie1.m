@@ -1,11 +1,12 @@
 close all; clear all; clc;
+
 net = newp([0 1; 0 1], 1,'hardlim');   %tworzenie sieci o jednym neuronie
-dane_wejsciowe = [0 0 1 1;             %wartoúci wejúciowe pierwszej zmiennej
-                  0 1 0 1];            %wartoúci wejúciowe drugiej zmiennej
-wyjscie = [0 0 0 1];                   %wartoúci wyjúciowe bramki logicznej
+dane_wejsciowe = [0 0 1 1;             %warto≈õci wej≈õciowe pierwszej zmiennej
+                  0 1 0 1];            %warto≈õci wej≈õciowe drugiej zmiennej
+wyjscie = [0 0 0 1];                   %warto≈õci wyj≈õciowe bramki logicznej
 plotpv(dane_wejsciowe, wyjscie);       %wykres z wynikami
 
-%parametry uczenia - wspÛ≥czynniki uczenia
+%parametry uczenia - wsp√≥≈Çczynniki uczenia
 net.trainParam.epochs = 8;
 net.trainParam.goal = 0.01;
 net.trainParam.mu = 0.001;
